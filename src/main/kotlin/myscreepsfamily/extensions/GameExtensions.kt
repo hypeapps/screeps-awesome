@@ -1,6 +1,6 @@
 package myscreepsfamily.extensions
 
-import types.base.global.Game
-import types.base.toMap
+import screeps.api.Game
+import screeps.utils.toMap
 
 fun Game.creepSize() = this.creeps.toMap().size

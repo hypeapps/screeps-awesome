@@ -5,7 +5,7 @@ import groovyx.net.http.RESTClient
 import static groovyx.net.http.ContentType.JSON
 
 buildscript {
-    ext.kotlin_version = '1.2.60'
+    ext.kotlin_version = '1.2.71'
 
     repositories {
         jcenter()
@@ -36,8 +36,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
-    compile "ch.delconte.screeps-kotlin:screeps-kotlin-types:0.9.6"
-
+    compile "ch.delconte.screeps-kotlin:screeps-kotlin-types:1.0.0"
     testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
 }
 
@@ -72,7 +71,7 @@ task("deploy") {
 
         RESTClient client = new RESTClient()
         client.uri = "https://screeps.com/api/user/code"
-        client.headers["Authorization"] = 'Basic ' + ("$screepsUser:$screepsPassword".toString().bytes.encodeBase64())
+        client.headers["Authorization"] = 'Basic ' + ("$screepsUsername:$screepsPassword".toString().bytes.encodeBase64())
         client.headers["Content-Type"] = "application/json"
         client.handler.success = { HttpResponseDecorator response, LazyMap data->
             //screeps api is a bit weird, we get 200 OK even if branch does not exist

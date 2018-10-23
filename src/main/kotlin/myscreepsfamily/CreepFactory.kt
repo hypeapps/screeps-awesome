@@ -7,7 +7,7 @@ interface CreepFactory {
     companion object {
         fun createFromRole(role: Role){
             when(role) {
-                Role.HARVESTER -> Harvester()
+//                Role.HARVESTER -> Harvester()
             }
         }
     }

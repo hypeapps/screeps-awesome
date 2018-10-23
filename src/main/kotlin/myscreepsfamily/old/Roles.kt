@@ -1,13 +1,12 @@
 package myscreepsfamily
 
-import myscreepsfamily.old.role
-import types.base.global.ERR_NOT_IN_RANGE
-import types.base.global.RESOURCE_ENERGY
-import types.base.global.STRUCTURE_EXTENSION
-import types.base.global.STRUCTURE_SPAWN
-import types.base.prototypes.*
-import types.base.prototypes.structures.StructureController
-import types.base.prototypes.structures.StructureSpawn
+//import types.base.global.ERR_NOT_IN_RANGE
+//import types.base.global.RESOURCE_ENERGY
+//import types.base.global.STRUCTURE_EXTENSION
+//import types.base.global.STRUCTURE_SPAWN
+//import types.base.prototypes.*
+//import types.base.prototypes.structures.StructureController
+//import types.base.prototypes.structures.StructureSpawn
 
 enum class Role {
     UNASSIGNED,

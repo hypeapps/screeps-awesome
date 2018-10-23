@@ -2,11 +2,11 @@ package myscreepsfamily.task
 
 import myscreepsfamily.Role
 import myscreepsfamily.common.orNullIf
-import myscreepsfamily.old.role
-import types.base.global.BuildableStructureConstant
-import types.base.global.FIND_STRUCTURES
-import types.base.prototypes.Creep
-import types.base.prototypes.structures.Structure
+import myscreepsfamily.memory.role
+import screeps.api.BuildableStructureConstant
+import screeps.api.Creep
+import screeps.api.FIND_STRUCTURES
+import screeps.api.structures.Structure
 
 fun Creep.findStructures(vararg findConstant: BuildableStructureConstant): List<Structure> = room.find<Structure>(FIND_STRUCTURES)
         .filter { findConstant.contains(it.unsafeCast<BuildableStructureConstant>()) }

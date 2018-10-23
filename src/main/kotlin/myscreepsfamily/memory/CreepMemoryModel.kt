@@ -1,8 +1,7 @@
-package myscreepsfamily.old
+package myscreepsfamily.memory
 
 import myscreepsfamily.Role
-import types.base.global.CreepMemory
-import types.base.prototypes.ConstructionSite
+import screeps.api.CreepMemory
 
 var CreepMemory.role: Role
     get() {
