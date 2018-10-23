@@ -1,12 +1,8 @@
-package myscreepsfamily
+package myscreepsfamily.old
 
+import myscreepsfamily.Role
 import types.base.global.CreepMemory
-
-var CreepMemory.building: Boolean
-    get() = this.asDynamic().building ?: false
-    set(value) {
-        this.asDynamic().building = value
-    }
+import types.base.prototypes.ConstructionSite
 
 var CreepMemory.role: Role
     get() {
@@ -16,10 +12,3 @@ var CreepMemory.role: Role
     set(value) {
         this.asDynamic().role = value.name
     }
-
-var CreepMemory.pause: Int
-    get () = this.asDynamic().pause ?: 0
-    set (value) {
-        this.asDynamic().pause = value
-    }
-

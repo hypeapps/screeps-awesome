@@ -1,6 +1,8 @@
-package myscreepsfamily.roles
+package myscreepsfamily.task
 
+import myscreepsfamily.Role
 import myscreepsfamily.common.orNullIf
+import myscreepsfamily.old.role
 import types.base.global.BuildableStructureConstant
 import types.base.global.FIND_STRUCTURES
 import types.base.prototypes.Creep
@@ -14,3 +16,7 @@ fun Creep.findStructure(findConstant: BuildableStructureConstant): Structure? = 
 
 fun Creep.findStructure(findConstant: BuildableStructureConstant, condition: () -> Boolean): Structure? = findStructure(findConstant)
         ?.orNullIf { condition() }
+
+fun Creep.role(): Role = this.memory.role
+
+fun Creep.canCarryMoreEnergy() = (carry.energy < carryCapacity)

@@ -1,6 +1,7 @@
 package myscreepsfamily
 
 
+import myscreepsfamily.old.role
 import types.base.delete
 import types.base.get
 import types.base.global.*
