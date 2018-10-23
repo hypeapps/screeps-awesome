@@ -1,0 +1,4 @@
+package myscreepsfamily
+
+class CreepSpawner {
+}
